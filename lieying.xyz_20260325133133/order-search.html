@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>订单查询 | 猎鹰自助卖号</title>
+    <meta name="Keywords" content="Telegram账号, TG账号, 纸飞机账号, 美国TG号, 电报成品号, 自助买号, Telegram批发">
+    <meta name="Description" content="猎鹰自助卖号平台，提供稳定美国Telegram成品账号批发零售！自动发货、支持查单、详细登录教程。成品号耐用不封，欢迎自助下单购买TG账号/纸飞机号！">
+    <link rel="stylesheet" href="assets/luna/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/luna/main.css">
+    <link rel="shortcut icon" href="/assets/style/favicon.ico" />
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    </head>
+    <body>
+    <div class="background"></div>
+<div class="header" style="">
+    <div class="layui-row">
+        <div class="layui-col-md8 layui-col-md-offset2 layui-col-sm12">
+            <div class="header-box">
+                <a href="index.html">
+                    <img src="https://lieying.xyz/assets/common/images/default.jpg" alt="">
+                    <div class="info">猎鹰自助卖号</div>
+                </a>
+                <div class="query layui-hide-xs">
+                    <a href="order-search.html">
+                        <svg t="1602923269232" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg" p-id="4816" width="20" height="20">
+                            <path d="M965.6 447.2 752 447.2c-14.4 0-26.4-12-26.4-26.4 0-14.4 12-26.4 26.4-26.4l213.6 0c14.4 0 26.4 12 26.4 26.4C992.8 435.2 980.8 447.2 965.6 447.2zM965.6 233.6 699.2 233.6c-14.4 0-26.4-12-26.4-26.4 0-14.4 12-26.4 26.4-26.4l267.2 0c14.4 0 26.4 12 26.4 26.4C992.8 221.6 980.8 233.6 965.6 233.6zM606.4 623.2l156.8 156.8c21.6 21.6 21.6 56.8 0 78.4-21.6 21.6-56.8 21.6-78.4 0L528 701.6c-16-16-20-39.2-12-59.2-51.2 44-117.6 72-190.4 72-162.4 0-293.6-131.2-293.6-293.6s131.2-293.6 293.6-293.6 293.6 131.2 293.6 293.6c0 72.8-28 139.2-72 190.4C567.2 603.2 590.4 607.2 606.4 623.2zM324.8 233.6c-103.2 0-187.2 84-187.2 187.2s84 187.2 187.2 187.2S512 523.2 512 420 428 233.6 324.8 233.6zM805.6 607.2l160 0c14.4 0 26.4 12 26.4 26.4 0 14.4-12 26.4-26.4 26.4l-160 0c-14.4 0-26.4-12-26.4-26.4C779.2 619.2 791.2 607.2 805.6 607.2z"
+                                  p-id="4817" fill="#ffffff"></path>
+                        </svg>
+                        <span>订单查询</span>
+                    </a>
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+    <style>
+        .layui-table td, .layui-table th {
+            padding: 9px 5px;
+        }
+    </style>
+    <div class="main">
+        <div class="layui-row">
+            <div class="layui-col-md8 layui-col-md-offset2 layui-col-sm12">
+                <div class="main-box">
+
+                    <div class="pay-title">
+                        <svg style="margin-bottom: -6px;" t="1603120404646" class="icon" viewBox="0 0 1024 1024"
+                             version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1611" width="27" height="27">
+                            <path d="M320.512 428.032h382.976v61.44H320.512zM320.512 616.448h320.512v61.44H320.512z"
+                                  fill="#00EAFF" p-id="1612" data-spm-anchor-id="a313x.7781069.0.i3"
+                                  class="selected"></path>
+                            <path
+                                d="M802.816 937.984H221.184l-40.96-40.96V126.976l40.96-40.96h346.112l26.624 10.24 137.216 117.76 98.304 79.872 15.36 31.744v571.392l-41.984 40.96z m-540.672-81.92h500.736V345.088L677.888 276.48 550.912 167.936H262.144v688.128z"
+                                fill="#3C8CE7" p-id="1613" data-spm-anchor-id="a313x.7781069.0.i0" class=""></path>
+                        </svg>
+                        订单查询
+                    </div>
+                    <div class="layui-card-body">
+                        <p style="color: #3C8CE7;font-size: 18px;font-weight: 700; text-align: center;margin: 20px 0">
+                            最多只能查询最近 5 笔订单
+                        </p>
+                        <div class="layui-tab">
+                            <ul class="layui-tab-title">
+                                <li class="layui-this">订单号查询</li>
+                                <li>下单邮箱查询</li>
+                                <li>浏览器查询</li>
+                            </ul>
+                            <div class="layui-tab-content" style="text-align: center">
+                                <!-- 订单号查询 -->
+                                <div class="layui-tab-item layui-show">
+                                    <form class="layui-form" action="https://lieying.xyz/search-order-by-sn" method="post">
+                                        <input type="hidden" name="_token" value="a5QbacpPl7amBf0vW24Mwzg4EkU52AJQxHWWNEgC">
+                                        <div class="entry">
+                                            <span class="l-msg">订单号:</span>
+                                            <label class="input">
+                                                <input type="text" name="order_sn" required="" lay-verify="required"
+                                                       placeholder=""
+                                                       autocomplete="off">
+                                            </label>
+                                        </div>
+                                        <div class="btn">
+                                            <button lay-submit lay-filter="orderByid">
+                                                立即查询
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                                <!-- 邮箱查询 -->
+                                <div class="layui-tab-item">
+                                    <form class="layui-form" action="https://lieying.xyz/search-order-by-email" method="post">
+                                        <input type="hidden" name="_token" value="a5QbacpPl7amBf0vW24Mwzg4EkU52AJQxHWWNEgC">
+                                        <div class="entry">
+                                            <span class="l-msg">下单邮箱:</span>
+                                            <label class="input">
+                                                <input type="email" name="email" required lay-verify="required"
+                                                       placeholder="" autocomplete="off">
+                                            </label>
+                                        </div>
+                                                                                <div class="btn">
+                                            <button lay-submit lay-filter="orderByAccount">
+                                                立即查询
+                                            </button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                                <!-- 浏览器缓存 -->
+                                <div class="layui-tab-item">
+                                    <form class="layui-form" action="https://lieying.xyz/search-order-by-browser" method="post">
+                                        <input type="hidden" name="_token" value="a5QbacpPl7amBf0vW24Mwzg4EkU52AJQxHWWNEgC">
+                                        <div class="btn">
+                                            <button lay-submit lay-filter="searchOrderByBrowser">
+                                                立即查询
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    <div class="layui-row">
+        <div class="layui-col-md8 layui-col-md-offset2 layui-col-sm12">
+            <div style="text-align: center"><script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="79406e59-bd2e-44ab-94c9-26b2daca49e9";(function(){d=document;s=d.createElement("script");s.src="https://grab.bizsoso.com//upload/websites/N6ULUQb0-Qo/Yheseqvha3k/cdnAsset//l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div>
+            <p>Powered by <a href="https://grab.bizsoso.com//upload/websites/N6ULUQb0-Qo/Yheseqvha3k/cdnAsset//assimon/dujiaoka" target="_blank"></a></p>
+        </div>
+    </div>
+</div>
+    </body>
+<script>
+    let tipsMsg = {
+        least_one    : '购买数量不能低于1件',
+        exceeds      : '购买数量不能多于库存数量',
+        exceeds_limit: '购买数量不能多于限购数量',
+        mobile_order : '扫描二维码 手机下单'
+    };
+</script>
+<script src="assets/luna/layui/layui.js"></script>
+<script src="assets/luna/js/jquery-3.4.1.min.js"></script>
+<script src="assets/luna/main.js"></script>
+<script src="assets/luna/layui/lay/modules/layer.js"></script>
+    <script>
+        layui.use(['element', 'form'], function () {
+            var element = layui.element;
+            var form = layui.form;
+            //监听提交
+            form.on('submit(orderByid)', function (data) {
+                return true;
+            });
+            //监听提交
+            form.on('submit(orderByAccount)', function (data) {
+                return true;
+            });
+            //监听提交
+            form.on('submit(searchOrderByBrowser)', function (data) {
+                return true;
+            });
+        });
+    </script>
+</html>
