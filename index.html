@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>云枢科技 虚拟产品</title>
+    <meta name="Keywords" content="QQ账号, 微信账号, 抖音账号, 推特twitter号, 电报telegram号, 自助买号, 账号批发">
+    <meta name="Description" content="云枢科技，提供各类账号，自动发货，安全稳定！">
+    <link rel="stylesheet" href="assets/luna/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/luna/main.css">
+    <link rel="shortcut icon" href="/assets/style/favicon.ico" />
+    <style>
+        /* 顶部公告样式 - 改为白色背景，和商品栏一致 */
+        .top-notice {
+            background: #ffffff;
+            border-left: 4px solid #ff9f43;
+            padding: 12px 15px;
+            margin: 10px auto;
+            max-width: 1200px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #333;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .top-notice p {
+            margin: 0;
+            padding: 0;
+        }
+        .notice-title {
+            font-weight: bold;
+            color: #333;
+            margin-right: 8px;
+        }
+        .red-text {
+            color: red;
+            font-weight: bold;
+        }
+        .yellow-text {
+            color: #ffcc00;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .yellow-text:hover {
+            text-decoration: underline;
+        }
+
+        .goods-box { display: none !important; }
+        .goods-box.show { display: block !important; }
+        .cate-box.active {
+            background: linear-gradient(90deg, #2580e8, #00d4ff) !important;
+            color: #ffffff !important;
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.25) !important;
+        }
+        .cate-box.active p,
+        .cate-box.active div {
+            color: #FFFFFF !important;
+            font-weight: bold !important;
+        }
+
+        /* 【只放大、位置不变：更醒目】 */
+        [data-crisp-client="true"] [role="button"],
+        .crisp-client [role="button"] {
+            transform: scale(1.6) !important;
+            filter: drop-shadow(0 6px 16px rgba(0,180,255,0.55)) !important;
+            z-index: 9999 !important;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部独立公告栏 -->
+<div class="top-notice">
+    <p><span class="notice-title">公告：</span>所有商品<span class="red-text">售后包赔</span>，购买三小时内出现账号冻结或无法使用的情况，请联系客服换号或退款</p>
+    <p>售后请点击网页右下角图标咨询客服或联系24小时<a href="https://t.me/technology850" target="_blank" class="yellow-text">telegram在线客服</a></p>
+</div>
+
+<div class="background"></div>
+<div class="header">
+    <div class="layui-row">
+        <div class="layui-col-md8 layui-col-md-offset2 layui-col-sm12">
+            <div class="header-box">
+                <a href="index.html">
+                    <img src="assets/luna/img/mylogo.png" style="width:36px;height:36px;vertical-align:middle;margin-right:8px;border-radius:4px;">
+                    <div class="info">云枢科技 虚拟产品</div>
+                </a>
+                <div class="query layui-hide-xs">
+                    <a href="order-search.html">
+                        <svg t="1602923269232" class="icon" viewBox="0 0 1024 1024" width="20" height="20">
+                            <path d="M965.6 447.2 752 447.2c-14.4 0-26.4-12-26.4-26.4 0-14.4 12-26.4 26.4-26.4l213.6 0c-14.4 0-26.4 12-26.4 26.4C940.8 435.2 952.8 447.2 965.6 447.2zM965.6 233.6 699.2 233.6c-14.4 0-26.4-12-26.4-26.4 0-14.4 12-26.4 26.4-26.4l267.2 0c-14.4 0-26.4 12-26.4 26.4C940.8 221.6 952.8 233.6 965.6 233.6zM606.4 623.2l156.8 156.8c21.6 21.6 21.6 56.8 0 78.4-21.6 21.6-56.8 21.6-78.4 0L528 701.6c-16-16-20-39.2-12-59.2-51.2 44-117.6 72-190.4 72-162.4 0-293.6-131.2-293.6-293.6s131.2-293.6 293.6-293.6 293.6 131.2 293.6 293.6c0 72.8-28 139.2-72 190.4C567.2 603.2 590.4 607.2 606.4 623.2zM324.8 233.6c-103.2 0-187.2 84-187.2 187.2s84 187.2 187.2 187.2S512 523.2 512 420 428 233.6 324.8 233.6zM805.6 607.2l160 0c-14.4 0-26.4-12-26.4-26.4 0 14.4 12 26.4 26.4 26.4l160 0c14.4 0 26.4 12 26.4 26.4C992.8 619.2 980.8 607.2 965.6 607.2z" fill="#ffffff"></path>
+                        </svg>
+                        <span>订单查询</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main layui-hide-sm layui-show-xs">
+    <div class="layui-row">
+        <div class="layui-col-md8 layui-col-md-offset2 layui-col-sm12">
+            <div class="main-box">
+                <div class="title">
+                    <p class="tit">公告:</p>
+                </div>
+                <div class="goods">
+                    <div class="tips"><p style="color: #000; line-height: 1.8; font-size: 14.4px;">公告：<br>1. <span style="color:red;">主营全类型账号</span>，QQ/微信/支付宝/抖音/B站/小红书/闲鱼/淘宝/京东...<br>2. 购买自动发货，有任何问题请 <a href="https://t.me/technology850" style="color: #ffcc00; text-decoration: none;">联系客服</a></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="layui-row">
+        <div class="layui-col-md8 layui-col-md-offset2 layui-col-sm12">
+            <div class="main-box">
+                <div class="title">
+                    <svg viewBox="0 0 1024 1024" width="20" height="20">
+                        <path d="M619.52 578.56V808.96h194.56V660.48h-133.12v-81.92h215.04V849.92l-40.96 40.96h-276.48l-40.96-40.96V578.56z" fill="#00EAFF"></path>
+                        <path d="M619.52 512V215.04h194.56v172.032h-133.12v81.92h174.08l40.96-40.96V174.08l-40.96-40.96h-276.48l-40.96 40.96v337.92z" fill="#3C8CE7"></path>
+                        <path d="M445.44 890.88h-276.48l-40.96-40.96V619.52l40.96-40.96h174.08v81.92h-133.12V808.96h194.56V215.04h-194.56v172.032h133.12v81.92h-174.08l-40.96-40.96V174.08l40.96-40.96h276.48l40.96 40.96v675.84z" fill="#3C8CE7"></path>
+                    </svg>
+                    <span>选择分类</span>
+                </div>
+
+                <div class="cate">
+                    <div class="cate-box active" data-group="1"><p>QQ私人老号</p><div>商品数量：4</div></div>
+                    <div class="cate-box" data-group="2"><p>微信账号</p><div>商品数量：3</div></div>
+                    <div class="cate-box" data-group="3"><p>外网账号</p><div>商品数量：5</div></div>
+                    <div class="cate-box" data-group="4"><p>淘宝/京东/闲鱼账号</p><div>商品数量：6</div></div>
+                    <div class="cate-box" data-group="5"><p>快手/抖音/小红书号</p><div>商品数量：7</div></div>
+                </div>
+
+                <div class="goods">
+                    <p class="title-2">
+                        <svg viewBox="0 0 1024 1024" width="17" height="17">
+                            <path d="M803.84 883.712h-163.84v-81.92h133.12l118.784-393.216-178.176 95.232-55.296-15.36L512 240.64 365.568 488.448l-55.296 15.36-178.176-95.232 118.784 393.216h133.12v81.92h-163.84l-38.912-28.672L25.6 336.896l58.368-47.104 230.4 122.88 162.816-272.384h69.632l162.816 272.384 230.4-122.88 58.368 47.104-155.648 518.144z" fill="#3C8CE7"></path>
+                            <path d="M305.152 620.544h61.44v61.44h-61.44zM481.28 620.544h61.44v61.44h-61.44zM657.408 620.544h61.44v61.44h-61.44z" fill="#00EAFF"></path>
+                        </svg>
+                        <span>选择商品</span>
+                    </p>
+
+                    <div class="goods-list">
+                        <!-- QQ -->
+                        <a onclick="toPay('星星等级QQ（满月号）','5 U')" class="goods-box show" data-group="1">
+                            <div class="picture"><img src="assets/luna/img/qq-xingxing.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">星星等级QQ（满月号）</div>
+                                <div class="goods-price">5 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余280件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('月亮等级QQ（半年号）','10 U')" class="goods-box show" data-group="1">
+                            <div class="picture"><img src="assets/luna/img/qq-yueliang.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">月亮等级QQ（半年号）</div>
+                                <div class="goods-price">10 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余180件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('太阳等级QQ（3-5年老号）','25 U')" class="goods-box show" data-group="1">
+                            <div class="picture"><img src="assets/luna/img/qq-taiyang.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">太阳等级QQ（3-5年老号）</div>
+                                <div class="goods-price">25 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余40件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('皇冠等级QQ（10-15年老号）','55 U')" class="goods-box show" data-group="1">
+                            <div class="picture"><img src="assets/luna/img/qq-huangguan.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">皇冠等级QQ（10-15年老号）</div>
+                                <div class="goods-price">55 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余15件</span></div>
+                            </div>
+                        </a>
+
+                        <!-- 微信 -->
+                        <a onclick="toPay('国卡私人老号（未实名）','42 U')" class="goods-box" data-group="2">
+                            <div class="picture"><img src="assets/luna/img/wx-weiming.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">国卡私人老号（未实名）</div>
+                                <div class="goods-price">42 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余12件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('国卡私人老号（已实名未绑卡）','120 U')" class="goods-box" data-group="2">
+                            <div class="picture"><img src="assets/luna/img/wx-ming.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">国卡私人老号（已实名未绑卡）</div>
+                                <div class="goods-price">120 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余4件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('国卡私人老号（已实名已绑卡）','200 U')" class="goods-box" data-group="2">
+                            <div class="picture"><img src="assets/luna/img/wx-full.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">国卡私人老号（已实名已绑卡）</div>
+                                <div class="goods-price">200 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余11件</span></div>
+                            </div>
+                        </a>
+
+                        <!-- 外网 -->
+                        <a onclick="toPay('纸飞机Telegram（美国加拿大半年号）','5 U')" class="goods-box" data-group="3">
+                            <div class="picture"><img src="assets/luna/img/tg-half.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">纸飞机Telegram（美国加拿大半年号）</div>
+                                <div class="goods-price">5 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余126件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('纸飞机Telegram（美国加拿大一年号）','10 U')" class="goods-box" data-group="3">
+                            <div class="picture"><img src="assets/luna/img/tg-year.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">纸飞机Telegram（美国加拿大一年号）</div>
+                                <div class="goods-price">10 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余93件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('X账号（Twitter推特）（单卡半年号）','5 U')" class="goods-box" data-group="3">
+                            <div class="picture"><img src="assets/luna/img/x-twitter.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">X账号（Twitter推特）（单卡半年号）</div>
+                                <div class="goods-price">5 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余77件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('X账号（Twitter推特）（一年耐用号）','9 U')" class="goods-box" data-group="3">
+                            <div class="picture"><img src="assets/luna/img/x-twitter.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">X账号（Twitter推特）（一年耐用号）</div>
+                                <div class="goods-price">9 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余41件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('Instagram账号（半年老号）','6 U')" class="goods-box" data-group="3">
+                            <div class="picture"><img src="assets/luna/img/instagram.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">Instagram账号（半年老号）</div>
+                                <div class="goods-price">6 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余59件</span></div>
+                            </div>
+                        </a>
+
+                        <!-- 淘宝/京东/闲鱼 -->
+                        <a onclick="toPay('淘宝国卡私人老号（接码直登）','10 U')" class="goods-box" data-group="4">
+                            <div class="picture"><img src="assets/luna/img/tb.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">淘宝国卡私人老号（接码直登）</div>
+                                <div class="goods-price">10 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余132件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('淘宝实名老号（可正常购物）','28 U')" class="goods-box" data-group="4">
+                            <div class="picture"><img src="assets/luna/img/tb.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">淘宝实名老号（可正常购物）</div>
+                                <div class="goods-price">28 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余66件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('京东国卡私人老号（接码直登）','6 U')" class="goods-box" data-group="4">
+                            <div class="picture"><img src="assets/luna/img/jd.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">京东国卡私人老号（接码直登）</div>
+                                <div class="goods-price">6 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余147件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('京东实名活跃号（正常使用）','18 U')" class="goods-box" data-group="4">
+                            <div class="picture"><img src="assets/luna/img/jd.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">京东实名活跃号（正常使用）</div>
+                                <div class="goods-price">18 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余53件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('闲鱼国卡私人老号（已实名已绑支付宝）','35 U')" class="goods-box" data-group="4">
+                            <div class="picture"><img src="assets/luna/img/xy.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">闲鱼国卡私人老号（已实名已绑支付宝）</div>
+                                <div class="goods-price">35 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余39件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('闲鱼高权重活跃号（已实名已绑定支付宝）','66 U')" class="goods-box" data-group="4">
+                            <div class="picture"><img src="assets/luna/img/xy.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">闲鱼高权重活跃号（已实名已绑定支付宝）</div>
+                                <div class="goods-price">66 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余17件</span></div>
+                            </div>
+                        </a>
+
+                        <!-- 快手/抖音/小红书 -->
+                        <a onclick="toPay('快手直登私人国卡一年号','10 U')" class="goods-box" data-group="5">
+                            <div class="picture"><img src="assets/luna/img/ks.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">快手直登私人国卡一年号</div>
+                                <div class="goods-price">10 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余113件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('快手实名成品号（带作品）','32 U')" class="goods-box" data-group="5">
+                            <div class="picture"><img src="assets/luna/img/ks.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">快手实名成品号（带作品）</div>
+                                <div class="goods-price">32 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余42件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('抖音直登私人国卡一年号','9 U')" class="goods-box" data-group="5">
+                            <div class="picture"><img src="assets/luna/img/dy.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">抖音直登私人国卡一年号</div>
+                                <div class="goods-price">9 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余128件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('抖音实名白号（可开播）','29 U')" class="goods-box" data-group="5">
+                            <div class="picture"><img src="assets/luna/img/dy.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">抖音实名白号（可开播）</div>
+                                <div class="goods-price">29 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余37件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('抖音千粉成品号','88 U')" class="goods-box" data-group="5">
+                            <div class="picture"><img src="assets/luna/img/dy.jpg"></div>
+                            <div class="msg">
+                                <div class="goods-name">抖音千粉成品号</div>
+                                <div class="goods-price">88 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余9件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('小红书私人国卡一年号','12 U')" class="goods-box" data-group="5">
+                            <div class="picture"><img src="assets/luna/img/xhs.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">小红书私人国卡一年号</div>
+                                <div class="goods-price">12 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余94件</span></div>
+                            </div>
+                        </a>
+                        <a onclick="toPay('小红书实名种草号','38 U')" class="goods-box" data-group="5">
+                            <div class="picture"><img src="assets/luna/img/xhs.png"></div>
+                            <div class="msg">
+                                <div class="goods-name">小红书实名种草号</div>
+                                <div class="goods-price">38 U</div>
+                                <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余26件</span></div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="layui-row">
+        <div class="layui-col-md8 layui-col-md-offset2 layui-col-sm12">
+            <p>Powered by 云枢科技</p>
+        </div>
+    </div>
+</div>
+
+<div class="query-m">
+    <a href="order-search.html">
+        <svg t="1602926403006" class="icon" viewBox="0 0 1024 1024" width="30" height="30">
+            <path d="M320.512 428.032h382.976v61.44H320.512zM320.512 616.448h320.512v61.44H320.512z" fill="#ffffff"></path>
+            <path d="M802.816 937.984H221.184l-40.96-40.96V126.976l40.96-40.96h346.112l26.624 10.24 137.216 117.76 98.304 79.872 15.36 31.744v571.392l-41.984 40.96z m-540.672-81.92h500.736V345.088L677.888 276.48 550.912 167.936H262.144v688.128z" fill="#ffffff"></path>
+        </svg>
+        <span>查单</span>
+    </a>
+</div>
+
+<script>
+    function toPay(name, price) {
+        location.href = `pay.html?name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}`;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const cateBoxes = document.querySelectorAll('.cate-box');
+        cateBoxes.forEach(box => {
+            box.addEventListener('click', function() {
+                cateBoxes.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const group = this.dataset.group;
+                document.querySelectorAll('.goods-box').forEach(g => g.classList.remove('show'));
+                document.querySelectorAll(`.goods-box[data-group="${group}"]`).forEach(g => g.classList.add('show'));
+            });
+        });
+    });
+</script>
+
+<!-- Crisp 在线客服代码 -->
+<script type="text/javascript">
+window.$crisp = [];
+window.CRISP_WEBSITE_ID = "3263b86f-9e8f-423b-ad47-721e51ac2db6";
+(function() {
+  var d = document;
+  var s = d.createElement("script");
+  s.src = "https://client.crisp.chat/l.js";
+  s.async = 1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+</script>
+</body>
+</html>
