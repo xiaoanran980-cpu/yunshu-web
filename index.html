@@ -146,6 +146,44 @@
             color: #333;
         }
 
+        /* 数量选择器样式 */
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .quantity-btn {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .quantity-btn:hover {
+            background: #f5f5f5;
+        }
+        .quantity-input {
+            width: 60px;
+            text-align: center;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .total-price {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+        .total-price span {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
         /* 客服按钮 */
         [data-crisp-client="true"] [role="button"],
         .crisp-client [role="button"] {
@@ -239,7 +277,7 @@
                                 <div class="goods-price">5 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余280件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('星星等级QQ（满月号）','5 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('星星等级QQ（满月号）','5 U', 280)">确认购买</button>
                         </a>
                         <a class="goods-box show" data-group="1">
                             <div class="picture"><img src="assets/luna/img/qq-yueliang.png"></div>
@@ -248,7 +286,7 @@
                                 <div class="goods-price">10 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余180件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('月亮等级QQ（半年号）','10 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('月亮等级QQ（半年号）','10 U', 180)">确认购买</button>
                         </a>
                         <a class="goods-box show" data-group="1">
                             <div class="picture"><img src="assets/luna/img/qq-taiyang.png"></div>
@@ -257,7 +295,7 @@
                                 <div class="goods-price">25 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余40件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('太阳等级QQ（3-5年老号）','25 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('太阳等级QQ（3-5年老号）','25 U', 40)">确认购买</button>
                         </a>
                         <a class="goods-box show" data-group="1">
                             <div class="picture"><img src="assets/luna/img/qq-huangguan.png"></div>
@@ -266,7 +304,7 @@
                                 <div class="goods-price">55 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余15件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('皇冠等级QQ（10-15年老号）','55 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('皇冠等级QQ（10-15年老号）','55 U', 15)">确认购买</button>
                         </a>
 
                         <!-- 微信 -->
@@ -277,7 +315,7 @@
                                 <div class="goods-price">42 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余12件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('国卡私人老号（未实名）','42 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('国卡私人老号（未实名）','42 U', 12)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="2">
                             <div class="picture"><img src="assets/luna/img/wx-ming.jpg"></div>
@@ -286,7 +324,7 @@
                                 <div class="goods-price">120 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余4件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('国卡私人老号（已实名未绑卡）','120 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('国卡私人老号（已实名未绑卡）','120 U', 4)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="2">
                             <div class="picture"><img src="assets/luna/img/wx-full.jpg"></div>
@@ -295,7 +333,7 @@
                                 <div class="goods-price">200 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余11件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('国卡私人老号（已实名已绑卡）','200 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('国卡私人老号（已实名已绑卡）','200 U', 11)">确认购买</button>
                         </a>
 
                         <!-- 外网 -->
@@ -306,7 +344,7 @@
                                 <div class="goods-price">5 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余126件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('纸飞机Telegram（美国加拿大半年号）','5 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('纸飞机Telegram（美国加拿大半年号）','5 U', 126)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="3">
                             <div class="picture"><img src="assets/luna/img/tg-year.png"></div>
@@ -315,7 +353,7 @@
                                 <div class="goods-price">10 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余93件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('纸飞机Telegram（美国加拿大一年号）','10 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('纸飞机Telegram（美国加拿大一年号）','10 U', 93)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="3">
                             <div class="picture"><img src="assets/luna/img/x-twitter.png"></div>
@@ -324,7 +362,7 @@
                                 <div class="goods-price">5 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余77件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('X账号（Twitter推特）（单卡半年号）','5 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('X账号（Twitter推特）（单卡半年号）','5 U', 77)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="3">
                             <div class="picture"><img src="assets/luna/img/x-twitter.png"></div>
@@ -333,7 +371,7 @@
                                 <div class="goods-price">9 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余41件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('X账号（Twitter推特）（一年耐用号）','9 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('X账号（Twitter推特）（一年耐用号）','9 U', 41)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="3">
                             <div class="picture"><img src="assets/luna/img/instagram.jpg"></div>
@@ -342,7 +380,7 @@
                                 <div class="goods-price">6 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余59件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('Instagram账号（半年老号）','6 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('Instagram账号（半年老号）','6 U', 59)">确认购买</button>
                         </a>
 
                         <!-- 淘宝/京东/闲鱼 -->
@@ -353,7 +391,7 @@
                                 <div class="goods-price">10 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余132件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('淘宝国卡私人老号（接码直登）','10 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('淘宝国卡私人老号（接码直登）','10 U', 132)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="4">
                             <div class="picture"><img src="assets/luna/img/tb.png"></div>
@@ -362,7 +400,7 @@
                                 <div class="goods-price">28 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余66件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('淘宝实名老号（可正常购物）','28 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('淘宝实名老号（可正常购物）','28 U', 66)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="4">
                             <div class="picture"><img src="assets/luna/img/jd.jpg"></div>
@@ -371,7 +409,7 @@
                                 <div class="goods-price">6 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余147件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('京东国卡私人老号（接码直登）','6 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('京东国卡私人老号（接码直登）','6 U', 147)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="4">
                             <div class="picture"><img src="assets/luna/img/jd.jpg"></div>
@@ -380,7 +418,7 @@
                                 <div class="goods-price">18 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余53件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('京东实名活跃号（正常使用）','18 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('京东实名活跃号（正常使用）','18 U', 53)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="4">
                             <div class="picture"><img src="assets/luna/img/xy.jpg"></div>
@@ -389,7 +427,7 @@
                                 <div class="goods-price">35 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余39件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('闲鱼国卡私人老号（已实名已绑支付宝）','35 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('闲鱼国卡私人老号（已实名已绑支付宝）','35 U', 39)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="4">
                             <div class="picture"><img src="assets/luna/img/xy.jpg"></div>
@@ -398,7 +436,7 @@
                                 <div class="goods-price">66 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余17件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('闲鱼高权重活跃号（已实名已绑定支付宝）','66 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('闲鱼高权重活跃号（已实名已绑定支付宝）','66 U', 17)">确认购买</button>
                         </a>
 
                         <!-- 快手/抖音/小红书 -->
@@ -409,7 +447,7 @@
                                 <div class="goods-price">10 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余113件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('快手直登私人国卡一年号','10 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('快手直登私人国卡一年号','10 U', 113)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="5">
                             <div class="picture"><img src="assets/luna/img/ks.png"></div>
@@ -418,7 +456,7 @@
                                 <div class="goods-price">32 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余42件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('快手实名成品号（带作品）','32 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('快手实名成品号（带作品）','32 U', 42)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="5">
                             <div class="picture"><img src="assets/luna/img/dy.jpg"></div>
@@ -427,7 +465,7 @@
                                 <div class="goods-price">9 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余128件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('抖音直登私人国卡一年号','9 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('抖音直登私人国卡一年号','9 U', 128)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="5">
                             <div class="picture"><img src="assets/luna/img/dy.jpg"></div>
@@ -436,7 +474,7 @@
                                 <div class="goods-price">29 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余37件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('抖音实名白号（可开播）','29 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('抖音实名白号（可开播）','29 U', 37)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="5">
                             <div class="picture"><img src="assets/luna/img/dy.jpg"></div>
@@ -445,7 +483,7 @@
                                 <div class="goods-price">88 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余9件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('抖音千粉成品号','88 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('抖音千粉成品号','88 U', 9)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="5">
                             <div class="picture"><img src="assets/luna/img/xhs.png"></div>
@@ -454,7 +492,7 @@
                                 <div class="goods-price">12 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余94件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('小红书私人国卡一年号','12 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('小红书私人国卡一年号','12 U', 94)">确认购买</button>
                         </a>
                         <a class="goods-box" data-group="5">
                             <div class="picture"><img src="assets/luna/img/xhs.png"></div>
@@ -463,7 +501,7 @@
                                 <div class="goods-price">38 U</div>
                                 <div class="goods-num"><div><p style="width:100%"></p></div><span>剩余26件</span></div>
                             </div>
-                            <button class="buy-btn" onclick="openPopup('小红书实名种草号','38 U')">确认购买</button>
+                            <button class="buy-btn" onclick="openPopup('小红书实名种草号','38 U', 26)">确认购买</button>
                         </a>
 
                     </div>
@@ -503,8 +541,15 @@
                 <input type="text" id="popupGoodsName" readonly>
             </div>
             <div class="layui-form-item">
-                <label>商品价格：</label>
-                <input type="text" id="popupGoodsPrice" readonly>
+                <label>购买数量：</label>
+                <div class="quantity-selector">
+                    <button type="button" class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                    <input type="number" id="popupQuantity" class="quantity-input" value="1" min="1" max="1" oninput="calculateTotal()">
+                    <button type="button" class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                </div>
+                <div class="total-price">
+                    商品单价：<span id="unitPrice"></span> | 总价：<span id="totalPrice"></span>
+                </div>
             </div>
             <div class="layui-form-item">
                 <label>卡密（用于查询订单）：</label>
@@ -539,15 +584,35 @@
 
     // 弹窗
     let currentGoods = {};
-    function openPopup(name, price) {
-        currentGoods = { name, price };
+    function openPopup(name, price, stock) {
+        const unitPrice = parseFloat(price.split(' ')[0]);
+        currentGoods = { name, price: unitPrice, stock };
         document.getElementById('popupGoodsName').value = name;
-        document.getElementById('popupGoodsPrice').value = price;
+        document.getElementById('popupQuantity').max = stock;
+        document.getElementById('popupQuantity').value = 1;
+        document.getElementById('unitPrice').textContent = price;
+        calculateTotal();
         document.getElementById('popupOverlay').style.display = 'flex';
     }
     function closePopup() {
         document.getElementById('popupOverlay').style.display = 'none';
         document.getElementById('purchaseForm').reset();
+    }
+
+    // 数量变更
+    function changeQuantity(delta) {
+        const input = document.getElementById('popupQuantity');
+        let value = parseInt(input.value) + delta;
+        value = Math.max(1, Math.min(value, parseInt(input.max)));
+        input.value = value;
+        calculateTotal();
+    }
+
+    // 计算总价
+    function calculateTotal() {
+        const quantity = parseInt(document.getElementById('popupQuantity').value);
+        const total = currentGoods.price * quantity;
+        document.getElementById('totalPrice').textContent = `${total} U`;
     }
 
     // 提交后跳转到支付页
@@ -557,8 +622,10 @@
         const email = document.getElementById('popupEmail').value;
         const goods = currentGoods.name;
         const price = currentGoods.price;
+        const quantity = parseInt(document.getElementById('popupQuantity').value);
+        const total = price * quantity;
 
-        location.href = `pay.html?name=${encodeURIComponent(goods)}&price=${encodeURIComponent(price)}&card=${encodeURIComponent(card)}&email=${encodeURIComponent(email)}`;
+        location.href = `pay.html?name=${encodeURIComponent(goods)}&price=${encodeURIComponent(price)}&quantity=${quantity}&total=${total}&card=${encodeURIComponent(card)}&email=${encodeURIComponent(email)}`;
     });
 </script>
 
